@@ -5,7 +5,7 @@ from sense_hat import SenseHat
 sense = SenseHat()
 
 sense.show_message("Ask a Question")
-sleep(5)
+sleep(1)
 
 replies = ['Signs point to yes',
            'without a doubt',
@@ -14,7 +14,10 @@ replies = ['Signs point to yes',
            'Looking good',
            'Cannot Predict now',
            'It is decidedly so',
-           'Outlook not so good'
+           'Outlook not so good',
+           'Your trashcan has a better chance',
+           'Maybe...',
+           'Probably.',
            ]
 
 while True:
