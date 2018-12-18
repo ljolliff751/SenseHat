@@ -20,9 +20,9 @@ ball_pixels = [
 ]
 
 sense.set_pixels(ball_pixels)
-sleep(5)
+sleep(3)
 
-sense.show_message("Ask a Question", text_colour=(255, 255, 255), back_colour=(128, 0, 128))
+sense.show_message("Ask a Question", text_colour=(255, 255, 255), back_colour=(128, 0, 128), scroll_speed=0.06)
 sleep(1)
 
 replies = ['Signs point to yes',
@@ -36,6 +36,12 @@ replies = ['Signs point to yes',
            'Your trashcan has a better chance',
            'Maybe...',
            'Probably.',
+           'Yep',
+           'Nope',
+           'I dont know',
+           'I suppose',
+           'I guess',
+           'Whatever you say'
            ]
 
 while True:
@@ -46,8 +52,9 @@ while True:
     z = abs(z)
 
     if x > 2 or y > 2 or z > 2 :
-        sense.show_message(choice(replies), text_colour=(255, 255, 255), back_colour=(128, 0, 128))
+        sense.show_message(choice(replies), text_colour=(255, 255, 255), back_colour=(128, 0, 128), scroll_speed=0.06)
     else:
         sense.clear()
 
-sense.show_message(choice(replies), text_colour=(255, 255, 255), back_colour=(128, 0, 128))
+sense.show_message(choice(replies), text_colour=(255, 255, 255), back_colour=(128, 0, 128), scroll_speed=0.06)
+
